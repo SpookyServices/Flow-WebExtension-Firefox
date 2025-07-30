@@ -1,0 +1,52 @@
+{
+  "author": "Spooky Services",
+  "host_permissions": [
+    "https://flow.spookysrv.com/*",
+    "https://app.flow.spookysrv.com/*"
+  ],
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "js": ["getConvoToken.js"],
+      "matches": ["https://app.flow.spookysrv.com/*"]
+    }
+  ],
+  "description": "Flow allows you to send notes and links between your devices seamlessly.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3,
+  "minimum_chrome_version": "111",
+  "short_name": "Flow",
+  "name": "Flow by Spooky Services",
+  "homepage_url": "https://flow.spookysrv.com",
+  "permissions": ["declarativeNetRequest", "sidePanel", "tabs", "storage"],
+  "version": "0.0.1",
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "enabled": true,
+        "id": "removeXFrame",
+        "path": "removeXFrame.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+
+  "commands": {
+    "openSidePanel": {
+      "description": "Open Side Panel",
+      "suggested_key": {
+        "default": "Alt+P"
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "id": 100,
+    "action": {
+      "type": "modifyHeaders",
+      "responseHeaders": [
+        {
+          "header": "Content-Security-Policy",
+          "operation": "remove"
+        },
+        {
+          "header": "X-Frame-Options",
+          "operation": "remove"
+        }
+      ]
+    },
+    "condition": {
+      "regexFilter": "(app[.]flow[.]spookysrv[.]com|flow[.]spookysrv[.]com)"
+    }
+  }
+]
