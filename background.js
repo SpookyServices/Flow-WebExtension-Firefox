@@ -9,6 +9,9 @@ chrome.commands.onCommand.addListener((command) => {
           chrome.sidePanel.setOptions({
             enabled: false
           });
+          chrome.sidePanel.setOptions({
+            enabled: true
+          });
           sidePanelOpen = false;
         } else {
           // Open the side panel
