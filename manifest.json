@@ -1,7 +1,6 @@
 {
   "author": "Spooky Services",
   "host_permissions": [
-    "https://flow.spookysrv.com/*",
     "https://app.flow.spookysrv.com/*"
   ],
   "content_scripts": [
