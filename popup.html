@@ -3,8 +3,22 @@
 <head>
     <meta charset="utf-8">
     <title>Flow</title>
+    <style>
+        #statusIcon {
+            display: block;
+            margin: 20px auto;
+        }
+        #status {
+            text-align: center;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            display: block;
+        }
+    </style>
 </head>
-<body style="width: 200px; height: 10px; margin: 5px; padding: 0;">
-    <span id="status">ℹ️ Sending to Flow...</span>
+<body style="width: 200px; height: 100px; margin: 5px; padding: 0; background-color: #131318;">
+    <img src="loading.gif" width="45" id="statusIcon">
+    <span id="status">Sending to Flow...</span>
     <script src="popup.js"></script>
 </body>

@@ -47,8 +47,10 @@ chrome.storage.local.get(
                     let currentUrl = tabs[0].url;
                     sendMessage(convoToken, currentUrl).then((success) => {
                         if (success) {
-                            document.getElementById("status").textContent = "✅ Sent to Flow";
+                            document.getElementById("statusIcon").src = "checkmark.svg";
+                            document.getElementById("status").textContent = "Sent to Flow";
                         } else {
+                            document.getElementById("statusIcon").style.display = "none";
                             document.getElementById("status").textContent = "❌ Failed to send message";
                             window.open("https://app.flow.spookysrv.com/?chromeLogin", "_blank");
                         }
