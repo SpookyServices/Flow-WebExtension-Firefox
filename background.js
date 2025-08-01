@@ -18,7 +18,7 @@ chrome.commands.onCommand.addListener((command) => {
           chrome.sidePanel.setOptions({
             enabled: true
           });
-          chrome.sidePanel.open({windowId: window.id});
+          chrome.sidePanel.open({ windowId: window.id });
           sidePanelOpen = true;
         }
       }
