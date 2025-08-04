@@ -12,7 +12,9 @@
   ],
   "description": "Flow allows you to send notes and links between your devices seamlessly.",
   "icons": {
-    "128": "icon.png"
+    "48": "icon48.png",
+    "128": "icon128.png",
+    "2048": "icon.png"
   },
   "action": {
     "default_popup": "popup.html"
@@ -23,7 +25,7 @@
   "name": "Flow by Spooky Services",
   "homepage_url": "https://flow.spookysrv.com",
   "permissions": ["declarativeNetRequest", "sidePanel", "tabs", "storage"],
-  "version": "0.0.3",
+  "version": "0.0.4",
   "declarative_net_request": {
     "rule_resources": [
       {
