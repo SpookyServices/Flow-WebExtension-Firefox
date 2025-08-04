@@ -47,6 +47,7 @@ function showNotification(message, duration = 4000, color = '#4CAF50') {
 }
 
 
+showNotification('Trying to login...', 1000, '#00bbffff');
 setTimeout(() => {
     const convoToken = localStorage.getItem('flutter.convoToken');
 
