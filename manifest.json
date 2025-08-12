@@ -1,8 +1,6 @@
 {
   "author": "Spooky Services",
-  "host_permissions": [
-    "https://app.flow.spookysrv.com/*"
-  ],
+  "host_permissions": ["https://app.flow.spookysrv.com/*"],
   "content_scripts": [
     {
       "all_frames": true,
@@ -22,34 +20,34 @@
     "default_popup": "popup.html"
   },
   "manifest_version": 3,
-  "minimum_chrome_version": "111",
   "short_name": "Flow",
   "name": "Flow by Spooky Services",
   "homepage_url": "https://flow.spookysrv.com",
-  "permissions": ["declarativeNetRequest", "sidePanel", "tabs", "storage"],
-  "version": "0.0.7",
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "enabled": true,
-        "id": "removeXFrame",
-        "path": "removeXFrame.json"
-      }
-    ]
+  "permissions": ["tabs", "storage"],
+  "version": "0.0.8",
+  "sidebar_action":   {
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "64": "icon64.png",
+      "128": "icon128.png"
+    },
+    "default_title": "Flow by Spooky Services",
+    "default_panel": "sidepanel.html",
+    "open_at_install": false
   },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "side_panel": {
-    "default_path": "sidepanel.html"
-  },
-
   "commands": {
     "openSidePanel": {
       "description": "Open Side Panel",
       "suggested_key": {
         "default": "Alt+P"
       }
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "flow@spookysrv.com"
     }
   }
 }
