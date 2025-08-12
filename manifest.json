@@ -37,14 +37,6 @@
     "default_panel": "sidepanel.html",
     "open_at_install": false
   },
-  "commands": {
-    "openSidePanel": {
-      "description": "Open Side Panel",
-      "suggested_key": {
-        "default": "Alt+P"
-      }
-    }
-  },
   "browser_specific_settings": {
     "gecko": {
       "id": "flow@spookysrv.com"
